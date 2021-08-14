@@ -1,0 +1,38 @@
+.affairs {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.affairItem {
+    width: 200px;
+    margin-right: 10px;
+
+}
+
+
+.red {
+    width: 100px;
+    color: red;
+}
+
+.yellow {
+    width: 100px;
+    display: inline-block;
+    color: orange;
+}
+
+.blue {
+    width: 100px;
+    display: inline-block;
+    color: blue;
+}
+
+.button {
+    margin-left: 50px;
+    padding: 0;
+}
+
+.categoryColor{
+    background-color: #61dafb;
+}
