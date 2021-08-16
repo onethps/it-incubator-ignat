@@ -1,0 +1,39 @@
+.nav{
+    display: inline-flex;
+    width: 300px;
+    transition-duration: 500ms;
+    transform: translate(-210px);
+}
+
+.navActive{
+    display: inline-flex;
+    transition-duration: 500ms;
+    transform: translate(0);
+}
+
+.bar{
+  display: flex;
+   align-self: center;
+   margin-left: 5px;
+}
+
+.navItem {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.5;
+}
+
+.active{
+    margin-left: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+}

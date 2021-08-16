@@ -1,28 +1,32 @@
 import React, {useState} from 'react'
 import {NavLink} from "react-router-dom";
 import {AiOutlineClose, GoThreeBars} from "react-icons/all";
+import s from "./Header.module.css"
+import Routes from "./Routes";
+
 
 function Header() {
 
-    const[sidebar, setSidebar] = useState(false)
+    const [bar, setBar] = useState(true)
 
-    const showSidebar = () => setSidebar(!sidebar)
+    const barHandler = () => {
+        setBar(!bar)
+    }
 
     return (
         <div>
-            <GoThreeBars onClick={showSidebar}/>
+            <div className={bar ? s.nav : s.navActive}>
+                <NavLink to='/pre-junior' activeClassName={s.active} >Pre-Junior</NavLink>
+                <NavLink to='/junior'  activeClassName={s.active} >Junior</NavLink>
+                <NavLink to='/juniorplus' activeClassName={s.active} >Junior+</NavLink>
+                <div className={s.bar} onClick={barHandler}>
+                    {bar ? <GoThreeBars/> : <AiOutlineClose/>}
+                </div>
+            </div>
 
-<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}/>
-            <ul className='nav-menu-items'>
-                <li className='navbar-toggle'>
-                    <AiOutlineClose/>
-                    <NavLink to='/pre-junior' className='menu-bars'> Pre-Junior</NavLink>
-                    <NavLink to='/junior'> junior</NavLink>
-                    <NavLink to='/junior+'> junior+</NavLink>
-                </li>
 
-            </ul>
         </div>
+
     )
 }
 
