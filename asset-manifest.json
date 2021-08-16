@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/it-incubator-ignat/static/css/main.96add590.chunk.css",
+    "main.js": "/it-incubator-ignat/static/js/main.5fa58e02.chunk.js",
+    "main.js.map": "/it-incubator-ignat/static/js/main.5fa58e02.chunk.js.map",
+    "runtime-main.js": "/it-incubator-ignat/static/js/runtime-main.b945658f.js",
+    "runtime-main.js.map": "/it-incubator-ignat/static/js/runtime-main.b945658f.js.map",
+    "static/js/2.128d92ce.chunk.js": "/it-incubator-ignat/static/js/2.128d92ce.chunk.js",
+    "static/js/2.128d92ce.chunk.js.map": "/it-incubator-ignat/static/js/2.128d92ce.chunk.js.map",
+    "index.html": "/it-incubator-ignat/index.html",
+    "static/css/main.96add590.chunk.css.map": "/it-incubator-ignat/static/css/main.96add590.chunk.css.map",
+    "static/js/2.128d92ce.chunk.js.LICENSE.txt": "/it-incubator-ignat/static/js/2.128d92ce.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b945658f.js",
+    "static/js/2.128d92ce.chunk.js",
+    "static/css/main.96add590.chunk.css",
+    "static/js/main.5fa58e02.chunk.js"
+  ]
+}
