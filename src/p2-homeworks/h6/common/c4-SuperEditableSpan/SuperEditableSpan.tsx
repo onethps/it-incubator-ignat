@@ -27,32 +27,37 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
-    const [editMode, setEditMode] = useState<boolean>(false)
+    const [editMode, setEditMode] = useState<boolean>(true)
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {}
 
     const onEnterCallback = () => {
-        // setEditMode() // выключить editMode при нажатии Enter
+        setEditMode(false) // выключить editMode при нажатии Enter
 
         onEnter && onEnter()
     }
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
-        // setEditMode() // выключить editMode при нажатии за пределами инпута
+        setEditMode(false) // выключить editMode при нажатии за пределами инпута
 
         onBlur && onBlur(e)
     }
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-        // setEditMode() // включить editMode при двойном клике
+        setEditMode(true) // включить editMode при двойном клике
 
         onDoubleClick && onDoubleClick(e)
     }
 
     const spanClassName = `${'сделать красивый стиль для спана'} ${className}`
 
+    const iconStyle = {width: '15px', height: '15px', marginLeft: '10px'}
+    const inputStyle = {display: "inline-block", height: '15px', margin: '20px'}
+    const spanStyle = {display: "inline-block", height: '15px', margin: '30px'}
+
     return (
         <>
             {editMode
                 ? (
                     <SuperInputText
+                        style={inputStyle}
                         autoFocus // пропсу с булевым значением не обязательно указывать true
                         onBlur={onBlurCallback}
                         onEnter={onEnterCallback}
@@ -61,14 +66,18 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     />
                 ) : (
                     <span
-                        onDoubleClick={onDoubleClickCallBack}
+                        style={spanStyle}
+                        // onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
 
                         {...restSpanProps}
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
                         {children || restProps.value}
+                        <img onClick={onDoubleClickCallBack} style={iconStyle}
+                             src={process.env.PUBLIC_URL + '/edit-span-icon.png'}/>
                     </span>
+
                 )
             }
         </>
