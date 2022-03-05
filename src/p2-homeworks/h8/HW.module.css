@@ -1,0 +1,9 @@
+.userBox{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.buttonBox{
+    display: flex;
+}
