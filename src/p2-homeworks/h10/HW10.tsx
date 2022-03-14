@@ -1,5 +1,6 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {Slider} from "@mui/material";
 
 function HW10() {
     // useSelector, useDispatch
@@ -11,7 +12,9 @@ function HW10() {
         console.log('loading...')
     };
 
-    return (
+
+
+        return (
         <div>
             <hr/>
             homeworks 10
@@ -23,6 +26,7 @@ function HW10() {
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
+
                     </div>
                 )
             }
