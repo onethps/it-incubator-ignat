@@ -2,7 +2,7 @@
     display: inline-flex;
     width: 300px;
     transition-duration: 500ms;
-    transform: translate(-210px);
+    transform: translate(-225px);
 }
 
 .navActive{
