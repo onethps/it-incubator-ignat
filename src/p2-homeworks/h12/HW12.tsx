@@ -29,7 +29,7 @@ function HW12() {
 
             {/*should work (должно работать)*/}
             {/*SuperSelect or SuperRadio*/}
-            <SuperSelect options={themes} onChange={onChangeCallback}/>
+         <div>   <SuperSelect options={themes} onChange={onChangeCallback} /></div>
 
             <hr/>
         </div>

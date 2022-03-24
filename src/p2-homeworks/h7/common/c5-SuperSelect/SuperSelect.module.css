@@ -1,0 +1,19 @@
+.selectStyle{
+    margin: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-bottom: 1px solid #181818;
+    background-color: #ececec;
+    border-radius: 2px;
+}
+
+.selectStyle:focus{
+    outline: none;
+    background-color: #e0e0e0;
+}
+
+.selectStyle:hover{
+    background-color: #e0e0e0;
+}
+
+
