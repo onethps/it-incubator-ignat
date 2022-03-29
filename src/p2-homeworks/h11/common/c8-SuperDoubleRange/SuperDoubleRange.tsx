@@ -29,6 +29,8 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         setValue2(newValue as number[]);
     };
 
+
+
     return (
         <div style={{width:'130px', display:'inline-block'}}>
             <Slider
